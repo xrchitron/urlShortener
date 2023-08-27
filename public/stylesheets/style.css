@@ -1,0 +1,13 @@
+.main-layout {
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.inline-center {
+  margin: auto;
+}
+#main-img {
+  max-width: 20vh;
+}

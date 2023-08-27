@@ -9,7 +9,7 @@ app.set("views", "./views");
 app.use(express.static("public")); //載入靜態檔案
 
 app.get("/", (req, res) => {
-  res.send("express app for new project");
+  res.render("index");
 });
 
 app.listen(port, () => {
