@@ -9,17 +9,7 @@ function randomUrlText() {
   for (let i = 0; i < 6; i++) {
     randomNumber[i] = wordPool[Math.floor(Math.random() * wordPool.length)];
   }
-  console.log(randomNumber.join(""));
-
-  //   randomNumber[0] = wordPool[Math.floor(Math.random() * wordPool.length)];
-  //   randomNumber[1] = wordPool[Math.floor(Math.random() * wordPool.length)];
-  //   randomNumber[2] = wordPool[Math.floor(Math.random() * wordPool.length)];
-  //   randomNumber[3] = wordPool[Math.floor(Math.random() * wordPool.length)];
-  //   randomNumber[4] = wordPool[Math.floor(Math.random() * wordPool.length)];
-  //   randomNumber[5] = wordPool[Math.floor(Math.random() * wordPool.length)];
-  //   return randomNumber.join("");
+  return randomNumber.join("");
 }
-// function shortenUrl() {
-//   const originalUrl = document.querySelector("#original-url").value;
-// }
-randomUrlText();
+
+module.exports = randomUrlText;
