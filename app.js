@@ -3,7 +3,7 @@ const { engine } = require("express-handlebars");
 
 const app = express();
 const port = 4000;
-const db = [];
+
 const functions = require("./public/javascript/functions");
 console.log(functions.randomUrlText());
 app.engine(".hbs", engine({ extname: ".hbs" }));
