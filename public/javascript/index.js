@@ -15,6 +15,8 @@ urlGeneration.addEventListener("click", (event) => {
       generatedUrl = ele.shorten;
     }
   });
+  //generate data to db
+  functions.addDB(db, generatedUrl, inputValue);
   //store garbled code to global environment in order to be copied
   currentShortenUrl = generatedUrl;
   //generate showed html

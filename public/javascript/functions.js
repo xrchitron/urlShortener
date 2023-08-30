@@ -12,10 +12,10 @@ module.exports = {
     }
     return randomNumber.join("");
   },
-  addDB: function (shorten, url) {
+  addDB: function (database, shorten, url) {
     const objects = {};
     objects.shorten = shorten;
     objects.url = url;
-    db.push(objects);
+    database.push(objects);
   },
 };
