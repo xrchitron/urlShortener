@@ -76,7 +76,12 @@ app.post("/shorten", (req, res) => {
   //   }
 });
 
-app.get("/:shortenUrl", (req, res) => {});
+app.get("/:shortenUrl", (req, res) => {
+  const result = db.find((ele) => {
+    return ele.shorten === req.params.shortenUrl;
+  });
+  res.redirect(result.url);
+});
 
 app.listen(port, () => {
   console.log(`express server is running on http://localhost:${port}`);
