@@ -4,8 +4,8 @@ This is a website which is able to shorten the url from any website any and reco
 
 ### Project snapshots
 
-![Alt urlShortener_img_01](https://github.com/xrchitron/urlShortener/blob/main/public/img/urlShortener_img_01.png)
-![Alt urlShortener_img_02](https://github.com/xrchitron/urlShortener/blob/main/public/img/urlShortener_img_02.png)
+![Alt urlShortener_img_01](https://github.com/xrchitron/urlShortener/blob/main/public/img/urlShortener_img_01.jpeg)
+![Alt urlShortener_img_02](https://github.com/xrchitron/urlShortener/blob/main/public/img/urlShortener_img_02.jpeg)
 
 ### Installation
 
