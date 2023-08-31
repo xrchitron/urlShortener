@@ -2,5 +2,11 @@
   { "shorten": "8L8kgr", "url": "https://www.google.com/" },
   { "shorten": "nfF7ck", "url": "https://www.youtube.com/" },
   { "shorten": "LKomQU", "url": "https://github.com/" },
-  { "shorten": "9FJVs9", "url": "https://dictionary.cambridge.org/zht/" }
+  { "shorten": "9FJVs9", "url": "https://dictionary.cambridge.org/zht/" },
+  {
+    "shorten": "Iu9GrV",
+    "url": "https://sequelize.org/docs/v6/core-concepts/model-basics/#data-types"
+  },
+  { "shorten": "wMMTq5", "url": "https://www.w3schools.com/sql/func_mysql_database.asp" },
+  { "shorten": "kRoA0d", "url": "https://dev.mysql.com/downloads/file/?id=520742" }
 ]
