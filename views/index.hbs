@@ -7,22 +7,23 @@
       id="main-img"
       alt="URL Shortener logo"
     />
-    <div class="card-body" id="url-generation">
-      <div class="input-group mb-3">
-        <input
-          type="text"
-          class="form-control"
-          id="originalUrl"
-          placeholder="Input URL here"
-          aria-label="Input URL here"
-          aria-describedby="basic-addon2"
-        />
+    <form method="post" action="/shorten">
+      <div class="card-body" id="url-generation">
+        <div class="input-group mb-3">
+          <input
+            type="text"
+            name="originalUrl"
+            class="form-control"
+            placeholder="Input URL here"
+            aria-label="Input URL here"
+            aria-describedby="basic-addon2"
+          />
+        </div>
+        <div class="text-center">{{message}}</div>
+        <div class="d-grid gap-2 col-3 mx-auto">
+          <button type="submit" class="btn btn-outline-primary">Shorten</button>
+        </div>
       </div>
-      <div class="d-grid gap-2 col-3 mx-auto">
-        <a href="/shorten" class="btn btn-outline-primary shorten-btn">Shorten</a>
-      </div>
-    </div>
+    </form>
   </div>
 </div>
-<script src="../javascript/functions.js"></script>
-<script src="../javascript/index.js"></script>
