@@ -27,21 +27,26 @@ app.post("/shorten", (req, res) => {
     const message = "Please input valid url";
     res.status(401).render("index", { message });
   }
+  // if input exist, do the following steps
   if (originalUrl) {
+    //looking for any url has existed in the database
     const result = db.find((ele) => {
       return ele.url === originalUrl;
     });
+    //if existed, use former shortenUrl and render the view
     if (result) {
       generatedUrl = result.shorten;
       res.render("shorten", { generatedUrl, port });
       return;
     } else {
+      // if not existed, push content to database and render the view
       const writeContent = { shorten: generatedUrl, url: originalUrl };
       db.push(writeContent);
       res.status(200).render("shorten", { generatedUrl, port });
       return;
     }
   }
+  //consider to rebuild the database with json file
   //   if (originalUrl) {
   //     fs.readFile("./public/json/data.json", "utf-8", (err, data) => {
   //       if (err) {
@@ -70,6 +75,8 @@ app.post("/shorten", (req, res) => {
   //     });
   //   }
 });
+
+app.get("/:shortenUrl", (req, res) => {});
 
 app.listen(port, () => {
   console.log(`express server is running on http://localhost:${port}`);
