@@ -11,10 +11,4 @@ function randomUrlText() {
   }
   return randomNumber.join("");
 }
-function addDB(shorten, url) {
-  const objects = {};
-  objects.shorten = shorten;
-  objects.url = url;
-  return objects;
-}
-module.exports = { randomUrlText, addDB };
+module.exports = { randomUrlText };
