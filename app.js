@@ -15,7 +15,6 @@ app.get("/", (req, res) => {
 });
 app.post("/shorten", (req, res) => {
   const originalUrl = req.body.originalUrl;
-  let generatedUrl = functions.randomUrlText(6);
   // if input empty, return invalid message
   if (!originalUrl) {
     const message = "Please input valid url";
@@ -33,11 +32,11 @@ app.post("/shorten", (req, res) => {
           return ele.url === originalUrl;
         });
         if (result) {
-          generatedUrl = result.shorten;
-          res.render("shorten", { generatedUrl, port });
+          res.status(200).render("shorten", { generatedUrl: result.shorten, port });
           return;
         } else {
           // if not existed, push content to database and render the view
+          const generatedUrl = functions.randomUrlText(6);
           const writeContent = { shorten: generatedUrl, url: originalUrl };
           content.push(writeContent);
           fs.writeFile("./public/json/data.json", JSON.stringify(content), (error) => {
