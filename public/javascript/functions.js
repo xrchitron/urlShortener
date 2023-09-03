@@ -1,14 +1,16 @@
-function randomUrlText() {
-  const number = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
-  const uppercaseA = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M"];
-  const uppercaseN = ["N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
-  const lowercaseA = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m"];
-  const lowercaseN = ["n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
-  const wordPool = [...number, ...uppercaseA, ...uppercaseN, ...lowercaseA, ...lowercaseN];
+function generateRandomNumber(range) {
+  return Math.floor(Math.random() * range);
+}
+function randomUrlText(textLength) {
+  const number = "0123456789";
+  const uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  const lowercase = uppercase.toLowerCase();
+  let wordPool = number + uppercase + lowercase;
+  wordPool = Array.from(wordPool);
   const randomNumber = [];
-  for (let i = 0; i < 6; i++) {
-    randomNumber[i] = wordPool[Math.floor(Math.random() * wordPool.length)];
+  for (let i = 0, range = wordPool.length; i < textLength; i++) {
+    randomNumber[i] = wordPool[generateRandomNumber(range)];
   }
   return randomNumber.join("");
 }
-module.exports = { randomUrlText };
+module.exports = { randomUrlText, generateRandomNumber };

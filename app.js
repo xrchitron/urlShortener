@@ -15,7 +15,7 @@ app.get("/", (req, res) => {
 });
 app.post("/shorten", (req, res) => {
   const originalUrl = req.body.originalUrl;
-  let generatedUrl = functions.randomUrlText();
+  let generatedUrl = functions.randomUrlText(6);
   // if input empty, return invalid message
   if (!originalUrl) {
     const message = "Please input valid url";
